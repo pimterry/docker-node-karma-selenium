@@ -42,7 +42,7 @@ RUN wget --no-verbose -O /tmp/chromedriver_linux64.zip http://chromedriver.stora
  && chmod 755 /opt/selenium/chromedriver-$CHROME_DRIVER_VERSION \
  && ln -fs /opt/selenium/chromedriver-$CHROME_DRIVER_VERSION /usr/bin/chromedriver
 
-COPY start-selenium.sh /usr/local/bin/start-selenium.sh
-RUN chmod +x /usr/local/bin/start-selenium.sh
+COPY start-selenium.sh /usr/local/bin/start-selenium
+RUN chmod +x /usr/local/bin/start-selenium
 
 EXPOSE 4444
